@@ -21,6 +21,6 @@
 class camera::no {
     case $::osfamily {
         'darwin': { include camera::no::darwin }
-        default:  { unimplemented() }
+        default:  { fail "unimplemented on ${::osfamily}" }
     }
 }
